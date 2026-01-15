@@ -1,17 +1,16 @@
-import java.util.List;
-
 public class MajorityElement {
 
 
     static int majorityElement(int[] nums) {
         int element = 0;
         int count = 0;
-        for(int i = 0; i < nums.length; i++) {
-            if(nums[i] == element) {
+        // for(int i = 0; i < nums.length; i++) {
+        for(int num: nums) {
+            if(num == element) {
                 count += 1;
             } else {
                 if(count == 0) {
-                    element = nums[i];
+                    element = num;
                     count += 1;
                 } else {
                     count -= 1;
