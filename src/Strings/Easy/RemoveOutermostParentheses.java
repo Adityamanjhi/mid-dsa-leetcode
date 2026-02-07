@@ -39,10 +39,17 @@ public class RemoveOutermostParentheses {
         int sum = 0;
         StringBuilder newStr = new StringBuilder();
         for(char c: s.toCharArray()) {
-            if(sum != 0) {
-                newStr.append(c);
+            if(c == '(') {
+                if(sum > 0) {
+                    newStr.append(c);
+                }
+                sum += 1;
+            } else {
+                sum -= 1;
+                if(sum > 0) {
+                    newStr.append(c);
+                }
             }
-            sum += c == '(' ? 1 : -1;
         }
         return newStr.toString();
     }
