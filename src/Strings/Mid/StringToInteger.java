@@ -63,8 +63,28 @@ public class StringToInteger {
         return getAtoiNumber(i, s, sign, 0);
     }
 
+    static int myAtoiNumber(String s, int index, int sign, long sum) {
+        if(sum >= MAX_INT) {
+            return MAX_INT;
+        }
+        if(sum <= MIN_INT) {
+            return MIN_INT;
+        }
+        return sign*(int)sum;
+    }
+
+    static int myAtoiSol3(String s) {
+        int sign = 1;
+        int index = 0;
+        while(s.charAt(index) == ' ') index++;
+        if(s.charAt(index) == '-') {
+            sign = -1;
+        }
+        return myAtoiNumber(s, index, sign, 0);
+    }
+
     public static void main(String[] args) {
         String s = "   -042";// "-00042";
-        System.out.println(myAtoiSol2(s));
+        System.out.println(myAtoiSol3(s));
     }
 }
