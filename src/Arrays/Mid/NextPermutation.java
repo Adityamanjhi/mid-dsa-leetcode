@@ -1,3 +1,5 @@
+package Arrays.Mid;
+
 import java.util.Arrays;
 
 public class NextPermutation {
@@ -32,7 +34,7 @@ public class NextPermutation {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 3, 2};
+        int[] nums = new int[]{1, 4, 3, 5, 4};      // new int[]{1, 3, 4, 2};      // new int[]{1, 3, 2};
         nextPermutation(nums);
         System.out.println(Arrays.toString(nums));
     }

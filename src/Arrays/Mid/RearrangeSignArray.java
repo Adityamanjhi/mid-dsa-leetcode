@@ -1,3 +1,5 @@
+package Arrays.Mid;
+
 import java.util.Arrays;
 
 public class RearrangeSignArray {
